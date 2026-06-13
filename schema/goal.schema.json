@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["title", "status", "category"],
+  "properties": {
+    "title":    { "type": "string" },
+    "status":   { "enum": ["draft", "active", "done", "archived"] },
+    "category": { "enum": ["career", "finance", "goals", "learning", "health", "ideas", "output"] },
+    "priority": { "enum": ["high", "medium", "low"] },
+    "due":      { "type": "string", "format": "date" },
+    "tags":     { "type": "array", "items": { "type": "string" } },
+    "related":  { "type": "array", "items": { "type": "string" } }
+  }
+}
